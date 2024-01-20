@@ -3,9 +3,9 @@ import { Menu, Layout } from 'antd'
 
 const { Header } = Layout
 
-const MainHeader = (props) => {
+const MainHeader = ({props}) => {
 
-  const headerItems = props.props.map((route, index) => ({
+  const headerItems = props.map((route, index) => ({
     key: index + 1,
     label: `${route.icon} ${route.name}`,
   }))

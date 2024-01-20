@@ -6,10 +6,9 @@ import MainFooter from './MainFooter'
 
 const { Content } = Layout
 
-const MainLayout = ({children}) => {
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken()
+const MainLayout = ({props, children}) => {
+  console.log(props)
+  const { token: { colorBgContainer, borderRadiusLG }} = theme.useToken()
   return (
     <Layout>
       <MainHeader props={mainRoutes} />
