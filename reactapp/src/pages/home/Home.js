@@ -1,14 +1,10 @@
 //? home page
-import MainLayout from "../../components/layouts/MainLayout"
-
-const prop = {
-  name: 'Home',
-}
+import MainLayout from "../../common-components/layouts/MainLayout"
 
 const Home = () => {
   return (
     <div>
-      <MainLayout props={prop}>
+      <MainLayout>
         <h1>this is the home page</h1>
       </MainLayout>
     </div>

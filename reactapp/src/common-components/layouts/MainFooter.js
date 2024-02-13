@@ -1,4 +1,4 @@
-//?da main footie
+//?da main footie for da kartie websitie
 import { Layout } from 'antd'
 
 const { Footer } = Layout
@@ -6,7 +6,7 @@ const { Footer } = Layout
 const MainFooter = () => {
   return(
     <Footer style={{ textAlign: 'center' }} >
-      Ant Design ©{new Date().getFullYear()} Created by Ant UED
+      jelly design, probably mr. logan and dontu too 🥹 ©{new Date().getFullYear()} Created by Ant UED
     </Footer>
   )
 }

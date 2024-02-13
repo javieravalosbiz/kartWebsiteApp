@@ -1,15 +1,29 @@
 //?users page
-import MainLayout from "../../components/layouts/MainLayout"
+import { useParams } from 'react-router-dom'
 
-const prop = {
-  name: 'User',
-}
+import MainLayout from '../../common-components/layouts/MainLayout'
+import Usercard from '../../common-components/usercard/Usercard'
 
 const User = () => {
+
+  const {user} = useParams()
+  const params = user ? user : 'me'
+
+  //todo: this is a placeholder object for the user data, this will be replaced by a fetch
+  const userData = {
+    username: params,
+    races: 999,
+    firsts: 997,
+    seconds: 1,
+    thirds: 1,
+    podiums: 999,
+  }
+
   return (
     <div>
-      <MainLayout props={prop}>
-        <h1>this is the user page</h1>
+      <MainLayout>
+        <h1>this is the user page for {params}</h1>
+        <Usercard userData={userData} />
       </MainLayout>
     </div>
   )

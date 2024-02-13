@@ -9,8 +9,13 @@ import mainRoutes from './Router/Routes'
     <Router>
       <Routes>
         {
-          mainRoutes.map((route, index) => {
-            return <Route key= {`router_${index}`} path={route.path} element={route.element} exact={true}/>
+          mainRoutes.routes.map((route, index) => {
+            return <Route 
+              key= {`router_${index}`} 
+              path={route.path} 
+              element={route.element} 
+              loader={({params})=> { /* we will probably use a cool ass fetch here heheheheheh */ }}  
+            />
           })
         }
       </Routes>
