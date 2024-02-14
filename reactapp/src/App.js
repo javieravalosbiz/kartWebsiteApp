@@ -2,14 +2,24 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import mainRoutes from './Router/Routes'
+import routes from './Router/Routes'
 
  const App = () => {
   return (
     <Router>
       <Routes>
         {
-          mainRoutes.routes.map((route, index) => {
+          routes.navRoutes.map((route, index) => {
+            return <Route 
+              key= {`router_${index}`} 
+              path={route.path} 
+              element={route.element} 
+              loader={({params})=> { /* we will probably use a cool ass fetch here heheheheheh */ }}  
+            />
+          })
+        }
+        {
+          routes.otherRoutes.map((route, index) => {
             return <Route 
               key= {`router_${index}`} 
               path={route.path} 
